@@ -1,13 +1,10 @@
-import os
+from db import get_engine
 from datetime import date, timedelta
 
 import pandas as pd
 import requests
-from dotenv import load_dotenv
-from sqlalchemy import create_engine
-from sqlalchemy.engine import URL
 
-load_dotenv()
+
 
 START_DATE = date(2015, 1, 1)
 CHUNK_DAYS = 90  # NBP API allows max 93 days per request
@@ -33,16 +30,6 @@ def fetch_period(start, end):
     return rows
 
 
-def get_engine():
-    url = URL.create(
-        "postgresql+psycopg2",
-        username=os.environ["POSTGRES_USER"],
-        password=os.environ["POSTGRES_PASSWORD"],
-        host=os.environ["POSTGRES_HOST"],
-        port=int(os.environ["POSTGRES_PORT"]),
-        database=os.environ["POSTGRES_DB"],
-    )
-    return create_engine(url)
 
 
 def main():

@@ -1,0 +1,23 @@
+variable_id,indicator,frequency,month,unit,description
+64428,avg_gross_wage_10plus,annual,,PLN,Przeciętne miesięczne wynagrodzenie brutto (podmioty powyżej 9 osób)
+64429,avg_gross_wage_10plus_vs_poland,annual,,pct,Wynagrodzenie w relacji do średniej krajowej (Polska=100)
+60270,unemployment_rate,annual,,pct,Stopa bezrobocia rejestrowanego
+453826,unemployment_rate_vs_poland,annual,,pct,Stopa bezrobocia w relacji do Polski (Polska=100)
+461680,unemployment_rate,monthly,1,pct,Stopa bezrobocia rejestrowanego - styczeń
+461681,unemployment_rate,monthly,2,pct,Stopa bezrobocia rejestrowanego - luty
+461682,unemployment_rate,monthly,3,pct,Stopa bezrobocia rejestrowanego - marzec
+461683,unemployment_rate,monthly,4,pct,Stopa bezrobocia rejestrowanego - kwiecień
+461684,unemployment_rate,monthly,5,pct,Stopa bezrobocia rejestrowanego - maj
+461685,unemployment_rate,monthly,6,pct,Stopa bezrobocia rejestrowanego - czerwiec
+461686,unemployment_rate,monthly,7,pct,Stopa bezrobocia rejestrowanego - lipiec
+461687,unemployment_rate,monthly,8,pct,Stopa bezrobocia rejestrowanego - sierpień
+461688,unemployment_rate,monthly,9,pct,Stopa bezrobocia rejestrowanego - wrzesień
+461689,unemployment_rate,monthly,10,pct,Stopa bezrobocia rejestrowanego - październik
+461690,unemployment_rate,monthly,11,pct,Stopa bezrobocia rejestrowanego - listopad
+461691,unemployment_rate,monthly,12,pct,Stopa bezrobocia rejestrowanego - grudzień
+60641,population,annual,,persons,Ludność ogółem wg miejsca zamieszkania - stan na 31 grudnia
+60616,population_midyear,annual,,persons,Ludność ogółem wg miejsca zamieszkania - stan na 30 czerwca
+217230,cpi,annual,,index_prev_year,Wskaźnik cen towarów i usług konsumpcyjnych ogółem (rok poprzedni=100) - COICOP 1999 - dane do 2025
+217231,cpi_food,annual,,index_prev_year,Wskaźnik cen - żywność i napoje bezalkoholowe (rok poprzedni=100)
+217234,cpi_housing,annual,,index_prev_year,Wskaźnik cen - mieszkanie (rok poprzedni=100)
+217236,cpi_transport,annual,,index_prev_year,Wskaźnik cen - transport (rok poprzedni=100)
