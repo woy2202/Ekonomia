@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: nbp_rates
+      - name: gus_bdl

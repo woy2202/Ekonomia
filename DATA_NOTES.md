@@ -16,3 +16,8 @@ Klasyfikacja COICOP 1999, dane kończą się na 2025 r. Od 2026 r. GUS
 publikuje inflację w nowej klasyfikacji COICOP 2018 (temat P4635, na razie
 tylko kwartalnie). Po publikacji danych rocznych za 2026 r. trzeba dołączyć
 nową serię i opisać sposób połączenia obu szeregów.
+
+## Atrybuty wartości (GUS BDL, attr_id)
+Wszystkie pobrane wartości mają attr_id = 1 i niepustą wartość
+(sprawdzone 2026-10-06, 6944 wiersze). Kolumna jest zachowana w stagingu
+na wypadek dodania zmiennych, w których pojawią się inne atrybuty.

@@ -1,0 +1,24 @@
+name: puls
+version: "1.0.0"
+profile: puls
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+
+models:
+  puls:
+    staging:
+      +schema: staging
+      +materialized: view
+    marts:
+      +schema: mart
+      +materialized: table
+seeds:
+  puls:
+    +schema: staging
+    gus_variables:
+      +column_types:
+        variable_id: integer
+        month: integer    

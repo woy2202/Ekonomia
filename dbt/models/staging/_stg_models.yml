@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: stg_nbp_rates
+    description: Średnie kursy walut NBP (tabela A), jeden wiersz na walutę i dzień.
+    columns:
+      - name: rate_date
+        data_tests:
+          - not_null
+      - name: currency_code
+        data_tests:
+          - not_null
+      - name: mid_rate
+        data_tests:
+          - not_null
+
+  - name: stg_gus_bdl
+    description: Wskaźniki GUS BDL dla województw, opisane słownikiem zmiennych.
+    columns:
+      - name: indicator
+        data_tests:
+          - not_null
+      - name: region_id
+        data_tests:
+          - not_null
+      - name: value
+        data_tests:
+          - not_null
+      - name: frequency
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ["annual", "monthly"]

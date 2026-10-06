@@ -15,7 +15,7 @@ load_dotenv()
 BASE_URL = "https://bdl.stat.gov.pl/api/v1"
 
 # variable_id: short name (fill in after searching)
-VARIABLES_FILE = Path(__file__).parent / "gus_variables.csv"
+VARIABLES_FILE = Path(__file__).parent.parent / "dbt" / "seeds" / "gus_variables.csv"
 
 
 def load_variables():
