@@ -21,3 +21,8 @@ nową serię i opisać sposób połączenia obu szeregów.
 Wszystkie pobrane wartości mają attr_id = 1 i niepustą wartość
 (sprawdzone 2026-10-06, 6944 wiersze). Kolumna jest zachowana w stagingu
 na wypadek dodania zmiennych, w których pojawią się inne atrybuty.
+
+## Zakres czasowy danych GUS
+Część wskaźników (m.in. ludność) jest dostępna od 1995 r. Pierwotnie wymiar
+dat zaczynał się od 2000 r., co wykrył test relationships (80 osieroconych
+wierszy: 16 województw x lata 1995-1999). Wymiar dat rozszerzono od 1990 r.

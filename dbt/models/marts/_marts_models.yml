@@ -1,0 +1,74 @@
+version: 2
+
+models:
+  - name: dim_date
+    description: Wymiar dat, jeden wiersz na każdy dzień od 2000 roku.
+    columns:
+      - name: date_key
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dim_region
+    description: Województwa z danych GUS BDL.
+    columns:
+      - name: region_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dim_currency
+    description: Waluty z tabeli A NBP z zakresem dostępnych kursów.
+    columns:
+      - name: currency_code
+        data_tests:
+          - unique
+          - not_null
+          
+  - name: fct_region_year
+    description: Wskaźniki roczne województw, jeden wiersz na województwo i rok.
+    columns:
+      - name: date_key
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_date')
+                field: date_key
+      - name: region_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_region')
+                field: region_id
+
+  - name: fct_unemployment_monthly
+    description: Stopa bezrobocia rejestrowanego, jeden wiersz na województwo i miesiąc.
+    columns:
+      - name: date_key
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_date')
+                field: date_key
+      - name: region_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_region')
+                field: region_id
+
+  - name: fct_exchange_rates
+    description: Średnie kursy walut NBP, jeden wiersz na walutę i dzień.
+    columns:
+      - name: date_key
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_date')
+                field: date_key
+  - name: currency_code
+    data_tests:
+      - relationships:
+              arguments:
+                to: ref('dim_currency')
+                field: currency_code          
